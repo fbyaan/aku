@@ -1,0 +1,253 @@
+/* BMI Section Styles */
+.bmi-section {
+    padding: 3rem 0;
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark);
+    font-size: 2rem;
+}
+
+.bmi-calculator {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bmi-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.bmi-result {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#calculate-bmi {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.result-value {
+    margin-bottom: 1.5rem;
+}
+
+#bmi-score {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary);
+    display: block;
+    line-height: 1;
+}
+
+#bmi-category {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.bmi-chart {
+    height: 30px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    margin-top: 1rem;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.chart-bar {
+    height: 100%;
+}
+
+.underweight {
+    background-color: #4FC3F7;
+    flex-basis: 18.5%;
+}
+
+.normal {
+    background-color: #66BB6A;
+    flex-basis: 24.9%;
+}
+
+.overweight {
+    background-color: #FFA726;
+    flex-basis: 29.9%;
+}
+
+.obese {
+    background-color: #EF5350;
+    flex-grow: 1;
+}
+
+.chart-indicator {
+    position: absolute;
+    top: -5px;
+    width: 3px;
+    height: 40px;
+    background-color: var(--black);
+    transform: translateX(-50%);
+}
+
+/* Exercise Section Styles */
+.exercise-section {
+    padding: 3rem 0;
+    background-color: var(--light);
+}
+
+.exercise-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #ccc;
+}
+
+.filter-btn.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+.exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.exercise-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.exercise-card:hover {
+    transform: translateY(-5px);
+}
+
+.exercise-img {
+    height: 200px;
+    background-color: #eee;
+    background-size: cover;
+    background-position: center;
+}
+
+.exercise-content {
+    padding: 1.5rem;
+}
+
+.exercise-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.exercise-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.exercise-type {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.type-cardio {
+    background-color: #E3F2FD;
+    color: #1976D2;
+}
+
+.type-strength {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+}
+
+.type-flexibility {
+    background-color: #FFF8E1;
+    color: #FF8F00;
+}
+
+.exercise-desc {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.exercise-link {
+    display: inline-block;
+    color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.exercise-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .bmi-calculator {
+        flex-direction: column;
+    }
+    
+    .bmi-form, .bmi-result {
+        width: 100%;
+    }
+}
