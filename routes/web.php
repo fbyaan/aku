@@ -21,6 +21,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/jadwal', [WorkoutScheduleController::class, 'index'])->name('jadwal');
     Route::get('/jadwal/api', [WorkoutScheduleController::class, 'jadwalapi'])->name('jadwalapi');
     Route::post('/workouts', [WorkoutScheduleController::class, 'store'])->name('workouts.store');
+    Route::get('/workouts/{workout}', [WorkoutScheduleController::class, 'show'])->name('workouts.show');
     Route::put('/workouts/{workout}', [WorkoutScheduleController::class, 'update'])->name('workouts.update');
     Route::delete('/workouts/{workout}', [WorkoutScheduleController::class, 'destroy'])->name('workouts.destroy');
 });
